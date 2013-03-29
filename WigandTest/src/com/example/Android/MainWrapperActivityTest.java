@@ -2,6 +2,7 @@ package com.example.Android;
 
 import android.test.ActivityUnitTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
+import mobi.mobiletech.apps.android.wigand.MainWrapperActivity;
 
 /**
  * This is a simple framework for a test of an Application.  See
