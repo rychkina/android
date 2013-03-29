@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar" android:layout_gravity="left|center_vertical"/>
+    <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" android:layout_gravity="center">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="choice 1"
+                android:id="@+id/radioButton" android:layout_gravity="center_horizontal|top" android:checked="false"/>
+        <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="choice 2"
+                android:id="@+id/radioButton1" android:layout_gravity="center_horizontal|top" android:checked="false"/>
+    </TableRow>
+    <TableLayout
+            android:layout_width="20dp"
+            android:layout_height="fill_parent" android:layout_gravity="left|center_vertical">
+    </TableLayout>
+</LinearLayout>

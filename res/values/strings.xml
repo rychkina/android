@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wigand</string>
+    <string name="back_menu">Back</string>
+    <string name="forward_menu">Forward</string>
+    <string name="reload_menu">Reload</string>
+    <string name="home_menu">Home</string>
+    <string name="services_menu">Tjenester</string>
+    <string name="options_menu">Options</string>
+    <string name="loading">Loading...</string>
+</resources>
