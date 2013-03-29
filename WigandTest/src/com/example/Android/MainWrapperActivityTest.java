@@ -16,15 +16,14 @@ import mobi.mobiletech.apps.android.wigand.MainWrapperActivity;
  */
 public class MainWrapperActivityTest extends ActivityUnitTestCase<MainWrapperActivity> {
 
-
     public MainWrapperActivityTest() {
         super(MainWrapperActivity.class);
-
     }
 
     @SmallTest
-    public void testMain(){
-           assertTrue(true);
+    public void testMain() {
+        MainWrapperActivity mainWrapperActivity = new MainWrapperActivity();
+        assertNotNull(mainWrapperActivity);
     }
 
 }
