@@ -7,7 +7,6 @@ import android.view.*;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.Toast;
-import com.example.Android.R;
 
 
 public class MainWrapperActivity extends Activity {

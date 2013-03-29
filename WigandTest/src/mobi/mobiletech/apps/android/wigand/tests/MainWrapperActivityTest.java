@@ -1,4 +1,4 @@
-package com.example.Android;
+package mobi.mobiletech.apps.android.wigand.tests;
 
 import android.test.ActivityUnitTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
@@ -11,7 +11,7 @@ import mobi.mobiletech.apps.android.wigand.MainWrapperActivity;
  * <p/>
  * To run this test, you can type:
  * adb shell am instrument -w \
- * -e class com.example.Android.MainWrapperActivityTest \
+ * -e class mobi.mobiletech.apps.android.wigand.tests.MainWrapperActivityTest \
  * com.example.Android.tests/android.test.InstrumentationTestRunner
  */
 public class MainWrapperActivityTest extends ActivityUnitTestCase<MainWrapperActivity> {
