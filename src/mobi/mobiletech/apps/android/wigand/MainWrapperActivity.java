@@ -10,9 +10,10 @@ import android.widget.Toast;
 
 
 public class MainWrapperActivity extends Activity {
-    WebView mWebView;
-    public static final String HTTP_WIGAND_SERVICES_HTML = "http://wigand.wew.io/services.html";
-    public static final  String url = "http://wigand.wew.io/";
+
+    private WebView mWebView;
+    public static final String WIGAND_SERVICES_HTML = "http://wigand.wew.io/services.html";
+    public static final String WIGAND_URL = "http://wigand.wew.io/";
 
     /**
      * Called when the activity is first created.
@@ -26,7 +27,7 @@ public class MainWrapperActivity extends Activity {
         mWebView.setHorizontalScrollBarEnabled(true);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new PageWebViewClient());
-        mWebView.loadUrl(url);
+        mWebView.loadUrl(WIGAND_URL);
         setWebChromeClientProps();
 
     }
@@ -44,6 +45,10 @@ public class MainWrapperActivity extends Activity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    public WebView getmWebView() {
+        return mWebView;
     }
 
     private void setWebChromeClientProps() {
@@ -84,7 +89,7 @@ public class MainWrapperActivity extends Activity {
         return menuChoice(item);
     }
 
-    private static void createMenu(Menu menu) {
+    public static void createMenu(Menu menu) {
         menu.setQwertyMode(true);
         MenuItem backMenuItem = menu.add(0, 0, 0, R.string.back_menu);
         {
@@ -120,7 +125,7 @@ public class MainWrapperActivity extends Activity {
 
     }
 
-    private boolean menuChoice(MenuItem item) {
+    public boolean menuChoice(MenuItem item) {
         switch (item.getItemId()) {
             case 0:
                 mWebView.goBack();
@@ -138,20 +143,20 @@ public class MainWrapperActivity extends Activity {
                         Toast.LENGTH_LONG).show();
                 return true;
             case 3:
-                mWebView.loadUrl(url);
+                mWebView.loadUrl(WIGAND_URL);
                 Toast.makeText(this, item.getTitle(),
                         Toast.LENGTH_LONG).show();
                 return true;
             case 4:
                 Toast.makeText(this, item.getTitle(),
                         Toast.LENGTH_LONG).show();
-                mWebView.loadUrl(HTTP_WIGAND_SERVICES_HTML);
+                mWebView.loadUrl(WIGAND_SERVICES_HTML);
 
                 return true;
             case 5:
                 Toast.makeText(this, item.getTitle(),
                         Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(this, MainWrapperActivity.class);
+                Intent intent = new Intent(this, OptionsActivity.class);
                 startActivity(intent);
                 return true;
         }
