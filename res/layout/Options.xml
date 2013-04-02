@@ -11,12 +11,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Use cache"
-                android:id="@+id/textView" android:layout_alignParentLeft="true" android:layout_marginLeft="27dp"
+                android:id="@+id/useCacheText" android:layout_alignParentLeft="true" android:layout_marginLeft="27dp"
                 android:layout_centerVertical="true"/>
         <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox"
+                android:id="@+id/useCacheCheckbox"
                 android:layout_alignParentRight="true" android:layout_alignTop="@+id/textView" android:checked="true"
                 android:text="   "/>
     </RelativeLayout>
@@ -27,14 +27,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Use social networks"
-                android:id="@+id/textView1"
+                android:id="@+id/useNetworksText"
                 android:layout_gravity="left|center_vertical"
                 android:layout_alignParentLeft="true" android:layout_marginLeft="22dp"
                 android:layout_alignParentTop="true" android:layout_marginTop="29dp"/>
         <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="28dp"
-                android:id="@+id/checkBox1"
+                android:id="@+id/useNetworksCheckbox"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true" android:layout_alignParentTop="true" android:checked="false"
                 android:text="   "/>
@@ -46,7 +46,7 @@
                 android:layout_width="110dp"
                 android:layout_height="31dp"
                 android:text="Rate it"
-                android:id="@+id/textView2" android:layout_alignParentLeft="true" android:layout_marginLeft="18dp"
+                android:id="@+id/reateItText" android:layout_alignParentLeft="true" android:layout_marginLeft="18dp"
                 android:layout_alignParentTop="true" android:layout_marginTop="20dp"/>
         <RatingBar
                 android:layout_width="wrap_content"

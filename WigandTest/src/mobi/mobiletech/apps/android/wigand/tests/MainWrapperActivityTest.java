@@ -57,8 +57,8 @@ public class MainWrapperActivityTest extends ActivityUnitTestCase<MainWrapperAct
 
     @SmallTest
     public void testUrls() {
-        assertEquals(TEST_WIGAND_URL, MainWrapperActivity.WIGAND_URL);
-        assertEquals(TEST_WIGAND_SERVICE_URL, MainWrapperActivity.WIGAND_SERVICES_HTML);
+        assertEquals(TEST_WIGAND_URL, MainWrapperActivity.WIGAND_URL_BASE);
+        assertEquals(TEST_WIGAND_SERVICE_URL, MainWrapperActivity.WIGAND_SERVICES_URL_BASE);
     }
 
 }

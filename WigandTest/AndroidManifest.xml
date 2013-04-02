@@ -16,6 +16,6 @@
     "adb shell am instrument -w com.example.Android.tests/android.test.InstrumentationTestRunner"
     -->
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="mobi.mobiletech.apps.android.wigand.tests"
-                     android:label="Tests for mobi.mobiletech.apps.android.wigand.tests"/>
+                     android:targetPackage="mobi.mobiletech.apps.android.wigand"
+                     android:label="Tests for mobi.mobiletech.apps.android.wigand"/>
 </manifest>

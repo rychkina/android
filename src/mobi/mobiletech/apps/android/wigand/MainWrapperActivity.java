@@ -12,8 +12,11 @@ import android.widget.Toast;
 public class MainWrapperActivity extends Activity {
 
     private WebView mWebView;
-    public static final String WIGAND_SERVICES_HTML = "http://wigand.wew.io/services.html";
-    public static final String WIGAND_URL = "http://wigand.wew.io/";
+
+    private String wigandUrl;
+    public static final String WIGAND_SERVICES_URL_BASE = "http://wigand.wew.io/services.html";
+    public static final String WIGAND_URL_BASE = "http://wigand.wew.io/";
+    public static final String ADD_CACHE = "cache=true";
 
     /**
      * Called when the activity is first created.
@@ -22,12 +25,13 @@ public class MainWrapperActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        initUrl();
         mWebView = (WebView) findViewById(R.id.webView1);
         mWebView.setVerticalScrollBarEnabled(true);
         mWebView.setHorizontalScrollBarEnabled(true);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new PageWebViewClient());
-        mWebView.loadUrl(WIGAND_URL);
+        mWebView.loadUrl(wigandUrl);
         setWebChromeClientProps();
 
     }
@@ -49,6 +53,14 @@ public class MainWrapperActivity extends Activity {
 
     public WebView getmWebView() {
         return mWebView;
+    }
+
+    public String getWigandUrl() {
+        return wigandUrl;
+    }
+
+    public void setWigandUrl(String wigandUrl) {
+        this.wigandUrl = wigandUrl;
     }
 
     private void setWebChromeClientProps() {
@@ -143,14 +155,14 @@ public class MainWrapperActivity extends Activity {
                         Toast.LENGTH_LONG).show();
                 return true;
             case 3:
-                mWebView.loadUrl(WIGAND_URL);
+                mWebView.loadUrl(wigandUrl);
                 Toast.makeText(this, item.getTitle(),
                         Toast.LENGTH_LONG).show();
                 return true;
             case 4:
                 Toast.makeText(this, item.getTitle(),
                         Toast.LENGTH_LONG).show();
-                mWebView.loadUrl(WIGAND_SERVICES_HTML);
+                mWebView.loadUrl(WIGAND_SERVICES_URL_BASE);
 
                 return true;
             case 5:
@@ -161,5 +173,12 @@ public class MainWrapperActivity extends Activity {
                 return true;
         }
         return false;
+    }
+
+    private void initUrl() {
+        StringBuilder urlBuilder = new StringBuilder(WIGAND_URL_BASE);
+        urlBuilder.append("?");
+        urlBuilder.append(ADD_CACHE);
+        wigandUrl = urlBuilder.toString();
     }
 }
